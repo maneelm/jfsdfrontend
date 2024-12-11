@@ -1,0 +1,79 @@
+/* Container for the View Menu page */
+.menu-container {
+  padding: 20px;
+  text-align: center;
+  background-color: #f4f4f4;
+}
+
+/* Grid layout for the menu items */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Adjusted min width for cards */
+  gap: 20px; /* Gap between grid items */
+  margin-top: 20px;
+}
+
+/* Card styling with flip effect */
+.menu-card {
+  position: relative;
+  width: 100%;
+  height: 250px; /* Reduced height */
+  perspective: 1000px; /* Add perspective to the container */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.menu-card-inner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.menu-card:hover .menu-card-inner {
+  transform: rotateY(180deg); /* Rotate on hover */
+}
+
+.menu-card-front, .menu-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+}
+
+.menu-card-front {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 10px; /* Reduced padding */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.menu-card-back {
+  background-color: #2C3E50;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotateY(180deg); /* Flip to the back */
+  padding: 10px; /* Reduced padding */
+}
+
+.menu-image {
+  width: 100%;
+  height: 120px; /* Reduced height */
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.menu-details {
+  margin-top: 10px;
+}
+
+.menu-details h3 {
+  margin-bottom: 5px; /* Reduced margin */
+}
+
+.menu-details p {
+  margin-bottom: 3px; /* Reduced margin */
+}

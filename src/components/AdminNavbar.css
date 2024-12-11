@@ -1,0 +1,164 @@
+/* AdminNavbar.css */
+.navbar {
+  background: rgba(41, 50, 100, 0.8) !important; /* Dark blue with transparency */
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  padding: 1px 40px !important;
+  box-shadow: 0 12px 15px rgba(0, 0, 0, 0.2) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Add this to properly align items */
+.MuiToolbar-root {
+  display: flex !important;
+  justify-content: space-between !important;
+  width: 100% !important;
+}
+
+.navbar-title {
+  text-decoration: none;
+  font-size: 24px !important;
+  color: #ffffff !important; /* White text for better contrast */
+  font-weight: 600 !important;
+  letter-spacing: 0.5px !important;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-right: auto !important; /* Push title to the left */
+  font-size: 20px !important;
+}
+.navbar-title:hover {
+  color: #a0a0ff !important; /* Light purple on hover */
+}
+
+.button-group {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-left: auto; /* Push buttons to the right */
+}
+
+/* Rest of your CSS remains exactly the same */
+
+.nav-button {
+  color: #e0e0ff !important; /* Light blue-white text */
+  background: transparent !important;
+  border-radius: 8px !important;
+  padding: 8px 16px !important; /* Reduced from 10px 20px */
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  text-transform: none !important;
+  transition: all 0.3s ease !important;
+  border: none !important;
+  position: relative;
+}
+
+.nav-button::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: #a0a0ff;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-button:hover::after {
+  width: 80%;
+}
+
+.nav-button:hover {
+  color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+
+.nav-button .MuiSvgIcon-root {
+  font-size: 18px !important;
+  transition: transform 0.3s ease;
+}
+
+.nav-button:hover .MuiSvgIcon-root {
+  transform: translateY(-2px);
+  color: #3498db;
+}
+
+.logout-button {
+  color: #ff9999 !important; /* Light red */
+  border: 1px solid rgba(255, 153, 153, 0.3) !important;
+  padding: 8px 20px !important;
+}
+
+.logout-button:hover {
+  background: rgba(255, 153, 153, 0.1) !important;
+  color: #ffcccc !important;
+}
+
+.logout-button::after {
+ background: #ff9999;
+}
+.logout-button .MuiSvgIcon-root {
+  color: #ff9999 !important; /* Set the icon color to light red */
+}
+
+.logout-button:hover .MuiSvgIcon-root {
+  color: #ffcccc !important; /* Change icon color on hover */
+}
+
+
+@media (max-width: 1200px) {
+  .nav-button {
+    padding: 8px 16px !important;
+  }
+}
+
+@media (max-width: 960px) {
+  .navbar {
+    padding: 15px 20px !important;
+  }
+
+  .button-group {
+    gap: 10px;
+  }
+
+  .nav-button {
+    font-size: 14px !important;
+  }
+}
+
+/* Optional: Add subtle animation for page load */
+/* @keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} */
+
+.navbar {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Optional: Add a custom scrollbar for the navbar if it overflows */
+.navbar::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.navbar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.navbar::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+.navbar::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}

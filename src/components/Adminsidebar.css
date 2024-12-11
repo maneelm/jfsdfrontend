@@ -1,0 +1,55 @@
+/* Sidebar styling */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 220px;
+    background: linear-gradient(135deg, #333, #444);
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .sidebar h2 {
+    color: #f5f5f5;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+  }
+  
+  .button-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .sidebar-button {
+    width: 100%;
+    color: white;
+    background-color: #555;
+    margin-bottom: 10px;
+    text-align: left;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .sidebar-button:hover {
+    background-color: #666;
+    transform: translateX(5px);
+  }
+  
+  .sidebar-button .MuiButton-startIcon {
+    color: #ddd;
+  }
+  
+  .sidebar-button .MuiButton-label {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 0.95rem;
+  }
+  

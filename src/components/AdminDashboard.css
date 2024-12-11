@@ -1,0 +1,48 @@
+/* General Styles */
+.dashboard {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #1a1c2c 0%, #2a3c77 100%);
+   /* background: #2e2f47; */
+  height: 100vh;
+  color: white;
+  font: 200;
+  font-size: larger;
+  /* justify-content: center; */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: #2C3E50; */
+  padding: 10px 20px;
+  color: white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+/* Menu button styling */
+.menu-icon {
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Content Area */
+.content {
+  padding: 20px;
+  justify-content: center;
+  margin-left: 25%;
+  font-size: 50px;
+}
+
+/* Link styles */
+.menu-item a {
+  text-decoration: none;
+  color: inherit;
+}
